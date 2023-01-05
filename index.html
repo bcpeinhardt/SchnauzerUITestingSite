@@ -5,18 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SchnauzerUI Testing Site</title>
-    <script>
-        document.querySelectorAll('.btn-turns-green-on-click').forEach(function(e) {
-            e.addEventListener('click', function(elm) {
-                elm.preventDefault();
-                this.style.backgroundColor = "green";
-            })
-        });
-    </script>
 </head>
 <body>
     <h1>This is a testing site for running SchnauzerUI tests against.</h1>
-    <form action="post">
 
         <!-- Test typing into input by associated label text -->
         <label for="firstname">First Name</label>
@@ -28,7 +19,20 @@
             <input type="text">
         </label>
 
+        <!-- Test clicking a button by its text -->
         <button class="btn-turns-green-on-click">Submit</button>
-    </form>
+
+        <!-- Helpful JavaScript -->
+        <script>
+
+            // Adding the class "btn-turns-green-on-click" to any element 
+            // applies the appropriate onclick function.
+            document.querySelectorAll('.btn-turns-green-on-click').forEach(function(e) {
+                e.addEventListener('click', function() {
+                    this.style.backgroundColor = "green"
+                })
+            })
+    
+        </script>
 </body>
 </html>
