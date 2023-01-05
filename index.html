@@ -30,10 +30,19 @@
         <input type="text" id="variable-input" name="variable-input">
         <br>
 
-        <!-- Test if statement by typing into exisisting element and not failing on nonexistant element -->
+        <!-- Test if statement by typing into existing element and not failing on nonexistant element -->
         <label for="if-stmt">Type into me if I exist</label>
         <input type="text" id="if-stmt" name="if-stmt">
         <br>
+
+        <!-- Locator tests -->
+        <p>Locate me by partial text: partial text test</p>
+        <p title="locate-by-title">Locate me by my title: locate-by-title</p>
+        <p id="locate-by-id">Locate me by my id: locate-by-id</p>
+        <p class="locate-by-class">Locate me by my class: locate-by-class</p>
+        <p name="locate-by-name">Locate me by my name: locate-by-name</p>
+        <p id="locate-by-xpath">Locate me by my xpath! //p[@id='locate-by-xpath']</p>
+        
 
         <!-- Helpful JavaScript -->
         <script>
