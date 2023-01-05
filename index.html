@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SchnauzerUI Testing Site</title>
+    <script>
+        function changeColor() {
+            document.querySelector("#blue-to-green-btn").style.backgroundColor = "green";
+        }
+    </script>
 </head>
 <body>
     <h1>This is a testing site for running SchnauzerUI tests against.</h1>
-
-    <!-- Form for testing inputs -->
     <form action="post">
 
         <!-- Test typing into input by associated label text -->
@@ -21,6 +24,8 @@
             Last Name
             <input type="text">
         </label>
+
+        <button id="blue-to-green-btn" onclick="changeColor">Submit</button>
     </form>
 </body>
 </html>
