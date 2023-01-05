@@ -7,6 +7,20 @@
     <title>SchnauzerUI Testing Site</title>
 </head>
 <body>
-    <h1>This is a testing site for running SchnauzerUI tests against. It exists because I cannot be bothered to run <i>python -m http.server 1234</i> every time I run the tests</h1>
+    <h1>This is a testing site for running SchnauzerUI tests against.</h1>
+
+    <!-- Form for testing inputs -->
+    <form action="post">
+
+        <!-- Test typing into input by associated label text -->
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname">
+
+        <!-- Test typing into input by containing label -->
+        <label>
+            Last Name
+            <input type="text">
+        </label>
+    </form>
 </body>
 </html>
