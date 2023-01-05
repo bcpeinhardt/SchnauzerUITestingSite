@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SchnauzerUI Testing Site</title>
     <script>
-        function changeColor() {
-            document.querySelector("#blue-to-green-btn").style.backgroundColor = "green";
-        }
+        document.querySelectorAll('.btn-turns-green-on-click').forEach(function(e) {
+            e.addEventListener('click', function(elm) {
+                elm.preventDefault();
+                this.style.backgroundColor = "green";
+            })
+        });
     </script>
 </head>
 <body>
@@ -25,7 +28,7 @@
             <input type="text">
         </label>
 
-        <button id="blue-to-green-btn" onclick="changeColor">Submit</button>
+        <button class="btn-turns-green-on-click">Submit</button>
     </form>
 </body>
 </html>
